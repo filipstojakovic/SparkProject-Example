@@ -1,25 +1,15 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.apache.spark.SparkConf;
-import org.apache.spark.api.java.JavaPairRDD;
-import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
-import org.apache.spark.api.java.function.Function;
-
-
-import org.apache.spark.api.java.function.Function2;
-import org.apache.spark.api.java.function.VoidFunction;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Encoders;
 import org.apache.spark.sql.SparkSession;
-import scala.Tuple2;
+
+import java.util.Arrays;
+import java.util.List;
 
 
-public class ViewingFigures
+public class Example
 {
     public static void main(String[] args)
     {
@@ -28,13 +18,14 @@ public class ViewingFigures
         Logger.getLogger("org.apache").setLevel(Level.WARN);
 
 
-        SparkSession conf = SparkSession.builder().appName("test").master("spark://10.10.1.14:7077").getOrCreate();
+//        SparkSession conf = SparkSession.builder().appName("test").master("spark://10.10.1.14:7077").getOrCreate();
+        SparkSession conf = SparkSession.builder().appName("test").master("local[*]").getOrCreate();
 
 
         try (JavaSparkContext sc = new JavaSparkContext(conf.sparkContext()))
         {
             Dataset<String> stringDataset = conf.createDataset(Arrays.asList("k","t","a","z", "b", "c", "a"), Encoders.STRING());
-            Dataset<String> sortedDataset = stringDataset.sort(stringDataset.col(stringDataset.columns()[0])); //by defualt is ascending order
+            Dataset<String> sortedDataset = stringDataset.sort(stringDataset.col(stringDataset.columns()[0]));
             List<String> result = sortedDataset.collectAsList();
             result.stream().forEach(i -> System.out.println(i));
 

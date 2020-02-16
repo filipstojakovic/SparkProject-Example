@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="577.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppView">
+   <children>
+      <Button layoutX="280.0" layoutY="506.0" mnemonicParsing="false" text="Button" />
+      <ComboBox fx:id="mutationComboBox" layoutX="46.0" layoutY="161.0" onAction="#mutationComboBoxAction" prefHeight="26.0" prefWidth="299.0" />
+      <TextField fx:id="mutationChanceField" layoutX="375.0" layoutY="161.0" prefHeight="26.0" prefWidth="149.0" visible="false" />
+      <Label layoutX="46.0" layoutY="28.0" text="Population size (S):">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="46.0" layoutY="48.0" prefHeight="26.0" prefWidth="178.0" />
+      <TextField layoutX="40.0" layoutY="236.0" />
+      <TextField layoutX="40.0" layoutY="299.0" />
+      <TextField layoutX="375.0" layoutY="104.0" />
+      <TextField layoutX="45.0" layoutY="104.0" AnchorPane.bottomAnchor="447.4" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="439.2" AnchorPane.topAnchor="104.0" />
+      <TextField layoutX="376.0" layoutY="48.0" />
+      <Label layoutX="45.0" layoutY="144.0" text=" Way to reproduce:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="85.0" text="Number of agents (A):">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="mutationChanceLabel" layoutX="375.0" layoutY="144.0" text="Meproduce chance (Pm):" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="216.0" text="Energy:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="279.0" text="Aggression:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="375.0" layoutY="85.0" text="Number of iterations for one epoch">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="376.0" layoutY="28.0" text="Number of epochs:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="40.0" layoutY="360.0" />
+      <Label layoutX="46.0" layoutY="340.0" text="c1:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="40.0" layoutY="419.0" />
+      <Label layoutX="46.0" layoutY="399.0" text="k1:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="224.0" layoutY="360.0" />
+      <Label layoutX="230.0" layoutY="340.0" text="c2:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="224.0" layoutY="419.0" />
+      <Label layoutX="230.0" layoutY="399.0" text="k2:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="411.0" layoutY="419.0" />
+      <Label layoutX="417.0" layoutY="399.0" text="k3:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

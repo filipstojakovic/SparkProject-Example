@@ -6,6 +6,8 @@ public class MainAppController
 {
 
     public JPanel panel1;
+    private JTextField textField1;
+    private JTextField textField2;
     private JButton myButton;
     private JLabel myLabel;
 
