@@ -7,14 +7,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="560.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppView">
+<AnchorPane prefHeight="560.0" prefWidth="633.0" styleClass="anchor" stylesheets="@background.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppView">
    <children>
-      <Button layoutX="257.0" layoutY="496.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="118.0" text="START" />
+      <Button layoutX="241.0" layoutY="484.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="149.0" text="START">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
       <ComboBox fx:id="mutationComboBox" layoutX="39.0" layoutY="161.0" onAction="#mutationComboBoxAction" prefHeight="26.0" prefWidth="299.0" />
       <TextField fx:id="mutationChanceField" layoutX="375.0" layoutY="161.0" prefHeight="26.0" prefWidth="178.0" visible="false" />
-      <Label layoutX="39.0" layoutY="28.0" text="Population size (S):">
+      <Label layoutX="39.0" layoutY="24.0" text="Population size (S):" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
       <TextField layoutX="39.0" layoutY="48.0" prefHeight="26.0" prefWidth="178.0" />
@@ -23,70 +26,71 @@
       <TextField layoutX="375.0" layoutY="104.0" prefHeight="26.0" prefWidth="178.0" />
       <TextField layoutX="44.0" layoutY="104.0" prefHeight="26.0" prefWidth="178.0" AnchorPane.bottomAnchor="447.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="411.0" AnchorPane.topAnchor="104.0" />
       <TextField layoutX="375.0" layoutY="48.0" prefHeight="26.0" prefWidth="178.0" />
-      <Label layoutX="39.0" layoutY="144.0" text=" Way to reproduce:">
+      <Label layoutX="39.0" layoutY="140.0" text=" Way to reproduce:" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="39.0" layoutY="85.0" text="Number of agents (A):">
+      <Label layoutX="39.0" layoutY="81.0" text="Number of agents (A):" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label fx:id="mutationChanceLabel" layoutX="375.0" layoutY="144.0" text="Mutation chance (Pm):" visible="false">
+      <Label fx:id="mutationChanceLabel" layoutX="377.0" layoutY="140.0" text="Mutation chance (Pm):" textFill="WHITE" visible="false">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="39.0" layoutY="216.0" text="Energy (e):">
+      <Label layoutX="39.0" layoutY="212.0" text="Energy (e):" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="40.0" layoutY="279.0" text="Aggression (a):">
+      <Label layoutX="40.0" layoutY="275.0" text="Aggression (a):" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="375.0" layoutY="85.0" text="Number of iterations (M):">
+      <Label layoutX="375.0" layoutY="81.0" text="Number of iterations (M):" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="376.0" layoutY="28.0" text="Number of epochs (N):">
+      <Label layoutX="376.0" layoutY="24.0" text="Number of epochs (N):" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
       <TextField layoutX="40.0" layoutY="360.0" text="15" />
-      <Label layoutX="46.0" layoutY="340.0" text="c1:">
+      <Label layoutX="46.0" layoutY="336.0" text="c1:" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
       <TextField layoutX="40.0" layoutY="419.0" text="0.5" />
-      <Label layoutX="46.0" layoutY="399.0" text="k1:">
+      <Label layoutX="46.0" layoutY="395.0" text="k1:" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
       <TextField layoutX="224.0" layoutY="360.0" text="15" />
-      <Label layoutX="230.0" layoutY="340.0" text="c2:">
+      <Label layoutX="230.0" layoutY="336.0" text="c2:" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
       <TextField layoutX="224.0" layoutY="419.0" text="0.5" />
-      <Label layoutX="230.0" layoutY="399.0" text="k2:">
+      <Label layoutX="230.0" layoutY="395.0" text="k2:" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
       <TextField layoutX="411.0" layoutY="419.0" text="0.5" />
-      <Label layoutX="417.0" layoutY="399.0" text="k3:">
+      <Label layoutX="417.0" layoutY="395.0" text="k3:" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
    </children>
+
 </AnchorPane>
