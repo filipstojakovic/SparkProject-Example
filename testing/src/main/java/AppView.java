@@ -24,6 +24,14 @@ public class AppView extends Application
     ObservableList<String> mutationWay = FXCollections
             .observableArrayList("duplicate", "duplicate with mutation chance", "four time combination");
 
+
+    @FXML
+    void startBtnClicked(ActionEvent event)
+    {
+
+
+    }
+
     public static void main(String[] args)
     {
         //START PROGRAM
@@ -33,7 +41,7 @@ public class AppView extends Application
     @FXML
     private void initialize()
     {
-        mutationComboBox.setValue("duplicate"); // start value
+        mutationComboBox.setValue("duplicate"); // initial value
         mutationComboBox.setItems(mutationWay); // add all choices to combobox
 
     }
@@ -49,11 +57,7 @@ public class AppView extends Application
 
     @FXML
     @Override
-    public void stop()
-    {
-//        System.out.println("Exiting");
-        System.exit(0);
-    }
+    public void stop(){System.exit(0);}
 
     @FXML
     @Override

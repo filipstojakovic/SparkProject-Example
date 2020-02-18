@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="560.0" prefWidth="633.0" styleClass="anchor" stylesheets="@background.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppView">
+<AnchorPane prefHeight="560.0" prefWidth="633.0" styleClass="anchor" stylesheets="@background.css" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppView">
    <children>
-      <Button layoutX="241.0" layoutY="484.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="149.0" text="START">
+      <Button layoutX="241.0" layoutY="484.0" mnemonicParsing="false" onAction="#startBtnClicked" prefHeight="46.0" prefWidth="149.0" text="START">
          <font>
             <Font name="System Bold" size="18.0" />
          </font></Button>
