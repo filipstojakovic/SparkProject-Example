@@ -6,10 +6,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="600.0" styleClass="anchor" stylesheets="@background.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Example">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="600.0" styleClass="anchor" stylesheets="@background.css" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Example">
    <children>
       <TextArea fx:id="initialTextArea" layoutY="37.0" prefHeight="128.0" prefWidth="600.0" wrapText="true" />
-      <Button layoutX="229.0" layoutY="354.0" mnemonicParsing="false" onAction="#startBtnClicked" prefHeight="47.0" prefWidth="142.0" text="START">
+      <Button fx:id="startBtn" alignment="CENTER" layoutX="229.0" layoutY="354.0" mnemonicParsing="false" onAction="#startBtnClicked" prefHeight="47.0" prefWidth="142.0" text="START" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="18.0" />
          </font></Button>

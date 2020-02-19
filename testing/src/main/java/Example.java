@@ -6,8 +6,10 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
@@ -28,6 +30,8 @@ import java.util.concurrent.TimeUnit;
 public class Example extends Application
 {
     @FXML
+    private Button startBtn;
+    @FXML
     private TextArea initialTextArea;
     @FXML
     private TextArea sortedTextArea;
@@ -42,7 +46,7 @@ public class Example extends Application
     void startBtnClicked(ActionEvent event)
     {
         long startTime = System.currentTimeMillis();
-
+        backgroundTask=null;
         backgroundTask = new Service<String>()
         {
             @Override
@@ -76,6 +80,7 @@ public class Example extends Application
 
             }
         });
+
         if(!"".equals(initialTextArea.getText().trim()))
             backgroundTask.start();
 
@@ -94,6 +99,7 @@ public class Example extends Application
         List<String> result = null;
         try
         {
+            //Connection with my claster
 //            SparkSession conf = SparkSession.builder().appName("test").master("spark://10.10.1.14:7077").getOrCreate();
             SparkSession conf = SparkSession.builder().appName("test").master("local[*]").getOrCreate();
 
@@ -142,8 +148,7 @@ public class Example extends Application
             Scene scene = new Scene(root);
             primaryStage.setTitle("Generic Algotithm");
             primaryStage.setScene(scene);
-
-//            primaryStage.setResizable(false);
+            primaryStage.setResizable(false);
             primaryStage.show();
         } catch (Exception ex)
         {
