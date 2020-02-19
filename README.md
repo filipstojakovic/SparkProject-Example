@@ -12,7 +12,7 @@ worry about IP's when i change network
 - Java 8 and JavaFX (making responsive UI so it doesn't freeze when background task is active)
 
 
->cat /etc/hosts
+cat /etc/hosts
 10.10.1.12 datanode1
 10.10.1.13 datanode2
 10.10.1.14 namenode1
